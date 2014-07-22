@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: double-dog_dev
+  pool: 5
+  timeout: 5000
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: double-dog_test
+  pool: 5
+  timeout: 5000
+  host: localhost
