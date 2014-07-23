@@ -1,5 +1,15 @@
+require 'active_record'
+
 class DoubleDog::Database::SQL
   class User < ActiveRecord::Base
+  end
+
+  def initialize
+    ActiveRecord::Base.establish_connection(
+      :adapter => 'postgresql',
+      :database => 'double-dog_test',
+      :host => 'localhost'
+    )
   end
 
   def create_user(attrs)
